@@ -72,21 +72,6 @@ export const preloadImages = (imageUrls) => {
         img.src = url
     })
 }
- * Preload images
- */
-export const preloadImages = (imageUrls) => {
-    imageUrls.forEach((url) => {
-        const img = new Image()
-        img.src = url
-    })
-}
-
-/**
- * Initialize all preloading
- */
-export const initializePreloading = () => {
-    // Preload videos
-    preloadVideos()
 
     // You can add image URLs here as needed
     // preloadImages(['/path/to/image1.jpg', '/path/to/image2.jpg'])
