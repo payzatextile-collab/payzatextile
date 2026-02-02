@@ -82,6 +82,7 @@ function Home() {
                         allow="autoplay; fullscreen; picture-in-picture"
                         title="Hero Background"
                         loading="eager"
+                        data-preload="true"
                     ></iframe>
                 </div>
                 <div className="hero__bg hero__bg--fallback">
@@ -197,6 +198,8 @@ function Home() {
                         frameBorder="0"
                         allow="autoplay; fullscreen"
                         title="Production Video"
+                        loading="lazy"
+                        data-preload="true"
                     ></iframe>
                 </div>
                 <div className="video-section__overlay">
@@ -302,6 +305,8 @@ function Home() {
                         frameBorder="0"
                         allow="autoplay; fullscreen"
                         title="Quality Control Video"
+                        loading="lazy"
+                        data-preload="true"
                     ></iframe>
                 </div>
                 <div className="video-section__overlay video-section__overlay--right">

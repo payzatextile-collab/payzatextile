@@ -543,6 +543,20 @@ h6 {
   border: none;
 }
 
+/* Responsive video containers */
+@media (max-width: 768px) {
+  .video-container {
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    padding-bottom: 56.25%;
+    border-radius: var(--radius-sm);
+  }
+}
+
 .video-overlay {
   position: absolute;
   inset: 0;
