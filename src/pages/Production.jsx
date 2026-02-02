@@ -1,9 +1,20 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useScrollReveal from '../hooks/useScrollReveal'
+import VideoModal from '../components/VideoModal'
 import './Production.css'
 
 function Production() {
     useScrollReveal()
+    const [activeVideo, setActiveVideo] = useState(null)
+
+    const openVideo = (url, title) => {
+        setActiveVideo({ url, title })
+    }
+
+    const closeVideo = () => {
+        setActiveVideo(null)
+    }
     const processSteps = [
         {
             number: '01',
@@ -41,7 +52,7 @@ function Production() {
         <>
             {/* Hero Section */}
             <section className="page-hero">
-                <img src="/images/_F4A9348-2-Edit.jpg" alt="Production" className="page-hero__bg" />
+                <img src="/images/_F4A7867.jpg" alt="Production" className="page-hero__bg" />
                 <div className="page-hero__overlay"></div>
                 <div className="page-hero__content">
                     <span className="section-tag">Our Production</span>
@@ -60,14 +71,18 @@ function Production() {
                         <span className="section-tag">Production Excellence</span>
                         <h2>Craftsmanship in Action</h2>
                         <p>Experience the precision and care that goes into every shirt we produce.</p>
-                        <a href="https://vimeo.com/1136411580" target="_blank" rel="noopener noreferrer" className="video-play-link">
+                        <button
+                            type="button"
+                            className="video-play-link"
+                            onClick={() => openVideo('https://player.vimeo.com/video/1136411580?autoplay=1&loop=1&muted=0&title=0&byline=0&portrait=0&dnt=1', 'Production Video')}
+                        >
                             <div className="play-button">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M8 5v14l11-7z" />
                                 </svg>
                             </div>
                             <span>Watch Video</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -118,14 +133,18 @@ function Production() {
                         <span className="section-tag">Quality Standards</span>
                         <h2>From Fabric to Finish</h2>
                         <p>See our rigorous quality control process that ensures international standards.</p>
-                        <a href="https://vimeo.com/1124425639" target="_blank" rel="noopener noreferrer" className="video-play-link">
+                        <button
+                            type="button"
+                            className="video-play-link"
+                            onClick={() => openVideo('https://player.vimeo.com/video/1124425639?autoplay=1&loop=1&muted=0&title=0&byline=0&portrait=0&dnt=1', 'Quality Control Video')}
+                        >
                             <div className="play-button">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M8 5v14l11-7z" />
                                 </svg>
                             </div>
                             <span>Watch Video</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -168,6 +187,12 @@ function Production() {
                     </div>
                 </div>
             </section>
+            <VideoModal
+                isOpen={Boolean(activeVideo)}
+                videoUrl={activeVideo?.url}
+                title={activeVideo?.title}
+                onClose={closeVideo}
+            />
         </>
     )
 }

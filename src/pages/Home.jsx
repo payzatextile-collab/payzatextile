@@ -5,7 +5,9 @@ import './Home.css'
 
 function Home() {
     const [openFAQ, setOpenFAQ] = useState(null)
+    const [activeImage, setActiveImage] = useState(null)
     const videoRefs = useRef([])
+    const galleryRef = useRef(null)
 
     // Scroll reveal animations
     useScrollReveal()
@@ -42,6 +44,24 @@ function Home() {
 
     const scrollToContent = () => {
         document.getElementById('intro')?.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    const galleryImages = [
+        { src: '/images/_F4A7431.jpg', alt: 'Shirt detail' },
+        { src: '/images/_F4A9064-Edit (1).jpg', alt: 'Fabric texture' },
+        { src: '/images/_F4A8225-Edit.jpg', alt: 'Collar detail' },
+        { src: '/images/_F4A9473-Edit.jpg', alt: 'Button detail' },
+        { src: '/images/_F4A8536-Edit.jpg', alt: 'Premium shirt' },
+        { src: '/images/_F4A9843 (1).jpg', alt: 'Full shirt' }
+    ]
+
+    const scrollGallery = (direction) => {
+        if (!galleryRef.current) return
+        const scrollAmount = galleryRef.current.clientWidth * 0.8
+        galleryRef.current.scrollBy({
+            left: direction === 'next' ? scrollAmount : -scrollAmount,
+            behavior: 'smooth'
+        })
     }
 
     const faqs = [
@@ -86,7 +106,7 @@ function Home() {
                     ></iframe>
                 </div>
                 <div className="hero__bg hero__bg--fallback">
-                    <img src="/images/_F4A7746-Edit.jpg" alt="" />
+                    <img src="/images/_F4A7867.jpg" alt="" />
                 </div>
                 <div className="hero__overlay"></div>
                 <div className="hero__content">
@@ -118,7 +138,7 @@ function Home() {
                             <Link to="/about" className="btn btn-dark">About Us</Link>
                         </div>
                         <div className="intro__image reveal-right">
-                            <img src="/images/_F4A8992-Edit.jpg" alt="Premium shirt craftsmanship" loading="lazy" />
+                            <img src="/images/_F4A0244.jpg" alt="Premium shirt craftsmanship" loading="lazy" />
                         </div>
                     </div>
                 </div>
@@ -227,7 +247,7 @@ function Home() {
                     <div className="brands__grid">
                         <div className="brand-card">
                             <div className="brand-card__image">
-                                <img src="/images/_F4A7746-Edit.jpg" alt="Boucheron Collection" loading="lazy" />
+                                <img src="/images/_F4A7867.jpg" alt="Boucheron Collection" loading="lazy" />
                             </div>
                             <div className="brand-card__content">
                                 <h3>Boucheron</h3>
@@ -275,25 +295,28 @@ function Home() {
 
             {/* IMAGE GALLERY */}
             <section className="gallery">
-                <div className="gallery__grid">
-                    <div className="gallery__item reveal-scale reveal-delay-1">
-                        <img src="/images/_F4A7431.jpg" alt="Shirt detail" loading="lazy" />
+                <div className="gallery__header container">
+                    <span className="section-tag">Gallery</span>
+                    <div className="gallery__controls">
+                        <button type="button" className="gallery__nav" onClick={() => scrollGallery('prev')} aria-label="Previous images">
+                            <span>‹</span>
+                        </button>
+                        <button type="button" className="gallery__nav" onClick={() => scrollGallery('next')} aria-label="Next images">
+                            <span>›</span>
+                        </button>
                     </div>
-                    <div className="gallery__item reveal-scale reveal-delay-2">
-                        <img src="/images/_F4A9064-Edit (1).jpg" alt="Fabric texture" loading="lazy" />
-                    </div>
-                    <div className="gallery__item reveal-scale reveal-delay-3">
-                        <img src="/images/_F4A8225-Edit.jpg" alt="Collar detail" loading="lazy" />
-                    </div>
-                    <div className="gallery__item reveal-scale reveal-delay-4">
-                        <img src="/images/_F4A9473-Edit.jpg" alt="Button detail" loading="lazy" />
-                    </div>
-                    <div className="gallery__item reveal-scale reveal-delay-5">
-                        <img src="/images/_F4A8536-Edit.jpg" alt="Premium shirt" loading="lazy" />
-                    </div>
-                    <div className="gallery__item reveal-scale reveal-delay-6">
-                        <img src="/images/_F4A9843 (1).jpg" alt="Full shirt" loading="lazy" />
-                    </div>
+                </div>
+                <div className="gallery__carousel" ref={galleryRef}>
+                    {galleryImages.map((image, index) => (
+                        <button
+                            key={image.src}
+                            type="button"
+                            className={`gallery__item reveal-scale reveal-delay-${(index % 6) + 1}`}
+                            onClick={() => setActiveImage(image)}
+                        >
+                            <img src={image.src} alt={image.alt} loading="lazy" />
+                        </button>
+                    ))}
                 </div>
             </section>
 
@@ -496,6 +519,18 @@ function Home() {
                     </div>
                 </div>
             </section >
+
+            {activeImage && (
+                <div className="image-modal" role="dialog" aria-modal="true">
+                    <button className="image-modal__backdrop" onClick={() => setActiveImage(null)} aria-label="Close image"></button>
+                    <div className="image-modal__content" role="document">
+                        <button className="image-modal__close" onClick={() => setActiveImage(null)} aria-label="Close image">
+                            <span>&times;</span>
+                        </button>
+                        <img src={activeImage.src} alt={activeImage.alt} />
+                    </div>
+                </div>
+            )}
 
             {/* MAP */}
             < section className="map" >

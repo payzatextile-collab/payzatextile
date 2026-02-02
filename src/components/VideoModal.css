@@ -1,0 +1,74 @@
+/* ================================================
+   Video Modal Styles
+   ================================================ */
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+}
+
+.video-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 10, 20, 0.85);
+    border: none;
+    cursor: pointer;
+}
+
+.video-modal__content {
+    position: relative;
+    z-index: 1;
+    width: min(900px, 100%);
+    background: #0a1628;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.video-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.video-modal__close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.video-modal__frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video-modal__frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 640px) {
+    .video-modal {
+        padding: var(--space-md);
+    }
+
+    .video-modal__content {
+        border-radius: var(--radius-md);
+    }
+}

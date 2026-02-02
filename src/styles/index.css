@@ -716,6 +716,9 @@ h6 {
   text-decoration: none;
   color: var(--color-white);
   transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .video-play-link span {

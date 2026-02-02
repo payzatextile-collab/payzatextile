@@ -310,8 +310,17 @@
         min-height: 350px;
     }
 
+    .page-hero__content {
+        padding: var(--space-lg);
+    }
+
     .page-hero__content h1 {
         font-size: 1.75rem;
+        line-height: 1.2;
+    }
+
+    .page-hero__content p {
+        font-size: var(--text-base);
     }
 
     .about-intro {

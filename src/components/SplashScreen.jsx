@@ -21,7 +21,6 @@ function SplashScreen() {
                     <h1 className="splash-screen__logo">PAYZA</h1>
                     <div className="splash-screen__underline"></div>
                 </div>
-                <p className="splash-screen__subtitle">Premium Textile</p>
             </div>
         </div>
     )
