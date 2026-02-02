@@ -404,6 +404,107 @@
     line-height: 1.7;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     font-weight: var(--weight-normal);
+    margin-bottom: var(--space-2xl);
+}
+
+/* Responsive video section */
+@media (max-width: 1024px) {
+    .video-section {
+        height: 70vh;
+        min-height: 450px;
+    }
+
+    .video-section__overlay,
+    .video-section__overlay--right {
+        padding: var(--space-3xl);
+    }
+
+    .video-section__content {
+        max-width: 450px;
+    }
+
+    .video-section__title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: var(--space-lg);
+    }
+
+    .video-section__desc {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        height: 100%;
+        min-height: auto;
+        padding: var(--space-3xl) 0;
+    }
+
+    .video-section__video {
+        display: none;
+    }
+
+    .video-section__overlay,
+    .video-section__overlay--right {
+        position: relative;
+        inset: auto;
+        background: var(--gradient-dark);
+        padding: var(--space-2xl);
+        justify-content: center;
+        text-align: center;
+        align-items: flex-start;
+        padding-top: var(--space-3xl);
+    }
+
+    .video-section__content {
+        max-width: 100%;
+    }
+
+    .video-section__title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        margin-bottom: var(--space-lg);
+        text-shadow: none;
+    }
+
+    .video-section__title span {
+        display: inline;
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .video-section__title span:nth-child(2) {
+        color: var(--color-accent);
+    }
+
+    .video-section__desc {
+        font-size: var(--text-base);
+        text-shadow: none;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: var(--space-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .video-section__overlay,
+    .video-section__overlay--right {
+        padding: var(--space-xl);
+    }
+
+    .video-section__title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: var(--space-md);
+    }
+
+    .video-section__desc {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-xl);
+    }
 }
 
 /* Brands Section */
@@ -924,13 +1025,6 @@
 
     .contact-cta__grid {
         grid-template-columns: 1fr;
-    }
-
-    .video-section__overlay,
-    .video-section__overlay--right {
-        background: rgba(10, 22, 40, 0.8);
-        justify-content: center;
-        text-align: center;
     }
 }
 
