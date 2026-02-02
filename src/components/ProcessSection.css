@@ -1,0 +1,118 @@
+/* ================================================
+   Process Section Styles
+   ================================================ */
+
+.process {
+    background: var(--color-white);
+}
+
+.process__timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-3xl);
+    position: relative;
+}
+
+.process__timeline::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-light-gray), var(--color-accent), var(--color-light-gray));
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.process-step__marker {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border: 3px solid var(--color-accent);
+    border-radius: 50%;
+    margin: 0 auto var(--space-xl);
+    position: relative;
+    z-index: 1;
+    transition: all var(--transition-base);
+}
+
+.process-step:hover .process-step__marker {
+    background: var(--color-accent);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-glow);
+}
+
+.process-step__number {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    color: var(--color-accent);
+    transition: color var(--transition-base);
+}
+
+.process-step:hover .process-step__number {
+    color: var(--color-primary);
+}
+
+.process-step__title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.process-step__description {
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+    line-height: var(--leading-relaxed);
+}
+
+.process__cta {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .process__timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process__timeline::before {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .process__timeline {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .process-step {
+        display: flex;
+        text-align: left;
+        gap: var(--space-lg);
+    }
+
+    .process-step__marker {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+
+    .process-step__content {
+        padding-top: var(--space-sm);
+    }
+}
