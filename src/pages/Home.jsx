@@ -80,7 +80,7 @@ function Home() {
                     ></iframe>
                 </div>
                 <div className="hero__bg hero__bg--fallback">
-                    <img src="/t/payzatextile/images/_F4A7746-Edit.jpg" alt="" />
+                    <img src="/images/_F4A7746-Edit.jpg" alt="" />
                 </div>
                 <div className="hero__overlay"></div>
                 <div className="hero__content">
@@ -112,7 +112,7 @@ function Home() {
                             <Link to="/about" className="btn btn-dark">About Us</Link>
                         </div>
                         <div className="intro__image">
-                            <img src="/t/payzatextile/images/_F4A8992-Edit.jpg" alt="Premium shirt craftsmanship" loading="lazy" />
+                            <img src="/images/_F4A8992-Edit.jpg" alt="Premium shirt craftsmanship" loading="lazy" />
                         </div>
                     </div>
                 </div>
@@ -219,7 +219,7 @@ function Home() {
                     <div className="brands__grid">
                         <div className="brand-card">
                             <div className="brand-card__image">
-                                <img src="/t/payzatextile/images/_F4A7746-Edit.jpg" alt="Boucheron Collection" loading="lazy" />
+                                <img src="/images/_F4A7746-Edit.jpg" alt="Boucheron Collection" loading="lazy" />
                             </div>
                             <div className="brand-card__content">
                                 <h3>Boucheron</h3>
@@ -234,7 +234,7 @@ function Home() {
 
                         <div className="brand-card">
                             <div className="brand-card__image">
-                                <img src="/t/payzatextile/images/_F4A8225-Edit.jpg" alt="Loranzo Collection" loading="lazy" />
+                                <img src="/images/_F4A8225-Edit.jpg" alt="Loranzo Collection" loading="lazy" />
                             </div>
                             <div className="brand-card__content">
                                 <h3>Loranzo</h3>
@@ -249,7 +249,7 @@ function Home() {
 
                         <div className="brand-card">
                             <div className="brand-card__image">
-                                <img src="/t/payzatextile/images/_F4A8536-Edit.jpg" alt="Payza Collection" loading="lazy" />
+                                <img src="/images/_F4A8536-Edit.jpg" alt="Payza Collection" loading="lazy" />
                             </div>
                             <div className="brand-card__content">
                                 <h3>Payza</h3>
@@ -269,19 +269,19 @@ function Home() {
             <section className="gallery">
                 <div className="gallery__grid">
                     <div className="gallery__item gallery__item--large">
-                        <img src="/t/payzatextile/images/_F4A7431.jpg" alt="Shirt detail" loading="lazy" />
+                        <img src="/images/_F4A7431.jpg" alt="Shirt detail" loading="lazy" />
                     </div>
                     <div className="gallery__item">
-                        <img src="/t/payzatextile/images/_F4A9064-Edit (1).jpg" alt="Fabric texture" loading="lazy" />
+                        <img src="/images/_F4A9064-Edit (1).jpg" alt="Fabric texture" loading="lazy" />
                     </div>
                     <div className="gallery__item">
-                        <img src="/t/payzatextile/images/_F4A9348-2-Edit.jpg" alt="Collar detail" loading="lazy" />
+                        <img src="/images/_F4A9348-2-Edit.jpg" alt="Collar detail" loading="lazy" />
                     </div>
                     <div className="gallery__item">
-                        <img src="/t/payzatextile/images/_F4A9473-Edit.jpg" alt="Button detail" loading="lazy" />
+                        <img src="/images/_F4A9473-Edit.jpg" alt="Button detail" loading="lazy" />
                     </div>
                     <div className="gallery__item gallery__item--large">
-                        <img src="/t/payzatextile/images/_F4A9558-Edit (1).jpg" alt="Full shirt" loading="lazy" />
+                        <img src="/images/_F4A9558-Edit (1).jpg" alt="Full shirt" loading="lazy" />
                     </div>
                 </div>
             </section>
@@ -389,7 +389,7 @@ function Home() {
 
             {/* IMAGE BANNER */}
             < section className="image-banner" >
-                <img src="/t/payzatextile/images/_F4A9843 (1).jpg" alt="Premium shirt manufacturing" loading="lazy" />
+                <img src="/images/_F4A9843 (1).jpg" alt="Premium shirt manufacturing" loading="lazy" />
                 <div className="image-banner__overlay">
                     <div className="image-banner__content">
                         <h2>Partner With Turkey's Leading Shirt Supplier</h2>

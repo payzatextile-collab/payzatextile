@@ -31,7 +31,7 @@ function Contact() {
         <>
             {/* Hero Section */}
             <section className="page-hero">
-                <img src="/t/payzatextile/images/_F4A7431.jpg" alt="Contact" className="page-hero__bg" />
+                <img src="/images/_F4A7431.jpg" alt="Contact" className="page-hero__bg" />
                 <div className="page-hero__overlay"></div>
                 <div className="page-hero__content">
                     <span className="section-tag">Get In Touch</span>

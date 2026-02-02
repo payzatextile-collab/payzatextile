@@ -39,7 +39,7 @@ function Production() {
         <>
             {/* Hero Section */}
             <section className="page-hero">
-                <img src="/t/payzatextile/images/_F4A9348-2-Edit.jpg" alt="Production" className="page-hero__bg" />
+                <img src="/images/_F4A9348-2-Edit.jpg" alt="Production" className="page-hero__bg" />
                 <div className="page-hero__overlay"></div>
                 <div className="page-hero__content">
                     <span className="section-tag">Our Production</span>
@@ -51,7 +51,7 @@ function Production() {
             {/* Video Section 1 */}
             <section className="prod-video">
                 <div className="prod-video__bg">
-                    <img src="/t/payzatextile/images/_F4A8225-Edit.jpg" alt="Manufacturing" loading="lazy" />
+                    <img src="/images/_F4A8225-Edit.jpg" alt="Manufacturing" loading="lazy" />
                 </div>
                 <div className="prod-video__overlay">
                     <div className="prod-video__content">
@@ -93,13 +93,13 @@ function Production() {
             <section className="prod-gallery">
                 <div className="prod-gallery__grid">
                     <div className="prod-gallery__item">
-                        <img src="/t/payzatextile/images/_F4A9473-Edit.jpg" alt="Detail work" loading="lazy" />
+                        <img src="/images/_F4A9473-Edit.jpg" alt="Detail work" loading="lazy" />
                     </div>
                     <div className="prod-gallery__item">
-                        <img src="/t/payzatextile/images/_F4A9558-Edit (1).jpg" alt="Shirt finishing" loading="lazy" />
+                        <img src="/images/_F4A9558-Edit (1).jpg" alt="Shirt finishing" loading="lazy" />
                     </div>
                     <div className="prod-gallery__item prod-gallery__item--wide">
-                        <img src="/t/payzatextile/images/_F4A9843 (1).jpg" alt="Final product" loading="lazy" />
+                        <img src="/images/_F4A9843 (1).jpg" alt="Final product" loading="lazy" />
                     </div>
                 </div>
             </section>
@@ -107,7 +107,7 @@ function Production() {
             {/* Video Section 2 */}
             <section className="prod-video prod-video--alt">
                 <div className="prod-video__bg">
-                    <img src="/t/payzatextile/images/_F4A8536-Edit.jpg" alt="Quality control" loading="lazy" />
+                    <img src="/images/_F4A8536-Edit.jpg" alt="Quality control" loading="lazy" />
                 </div>
                 <div className="prod-video__overlay prod-video__overlay--right">
                     <div className="prod-video__content">

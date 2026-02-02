@@ -6,7 +6,7 @@ function About() {
         <>
             {/* Hero Section */}
             <section className="page-hero">
-                <img src="/t/payzatextile/images/_F4A0244.jpg" alt="Payza Textile" className="page-hero__bg" />
+                <img src="/images/_F4A0244.jpg" alt="Payza Textile" className="page-hero__bg" />
                 <div className="page-hero__overlay"></div>
                 <div className="page-hero__content">
                     <span className="section-tag">About Payza Textile</span>
@@ -36,7 +36,7 @@ function About() {
                             </p>
                         </div>
                         <div className="about-intro__image">
-                            <img src="/t/payzatextile/images/_F4A9064-Edit (1).jpg" alt="Shirt craftsmanship" loading="lazy" />
+                            <img src="/images/_F4A9064-Edit (1).jpg" alt="Shirt craftsmanship" loading="lazy" />
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ function About() {
 
             {/* Image Section */}
             <section className="about-image-section">
-                <img src="/t/payzatextile/images/_F4A7867.jpg" alt="Fabric quality" loading="lazy" />
+                <img src="/images/_F4A7867.jpg" alt="Fabric quality" loading="lazy" />
                 <div className="about-image-section__overlay">
                     <div className="about-image-section__content">
                         <span className="section-tag">Turkish Craftsmanship</span>
