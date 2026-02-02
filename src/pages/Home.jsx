@@ -77,10 +77,11 @@ function Home() {
             <section className="hero">
                 <div className="hero__video">
                     <iframe
-                        src="https://player.vimeo.com/video/1108826568?h=37630d6219&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+                        src="https://player.vimeo.com/video/1108826568?h=37630d6219&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&transparent=1&dnt=1"
                         frameBorder="0"
-                        allow="autoplay; fullscreen"
+                        allow="autoplay; fullscreen; picture-in-picture"
                         title="Hero Background"
+                        loading="eager"
                     ></iframe>
                 </div>
                 <div className="hero__bg hero__bg--fallback">

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useScrollReveal from '../hooks/useScrollReveal'
 import './Contact.css'
 
 function Contact() {
@@ -14,6 +15,9 @@ function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitted, setSubmitted] = useState(false)
     const [error, setError] = useState(null)
+
+    // Initialize scroll animations
+    useScrollReveal()
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -58,14 +62,23 @@ function Contact() {
                     <h1>Let's Build Together</h1>
                     <p>Reach out to explore custom manufacturing solutions aligned with your goals.</p>
                 </div>
+                <button
+                    className="page-hero__scroll"
+                    onClick={() => document.getElementById('contact-start')?.scrollIntoView({ behavior: 'smooth' })}
+                    aria-label="Scroll down"
+                >
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                    </svg>
+                </button>
             </section>
 
             {/* Contact Section */}
-            <section className="contact-section">
+            <section className="contact-section" id="contact-start">
                 <div className="container">
                     <div className="contact-section__grid">
                         {/* Contact Form */}
-                        <div className="contact-form-wrapper">
+                        <div className="contact-form-wrapper reveal-left">
                             <h2>Send Us a Message</h2>
 
                             {submitted ? (
@@ -211,7 +224,7 @@ function Contact() {
                         </div>
 
                         {/* Contact Info */}
-                        <div className="contact-info">
+                        <div className="contact-info reveal-right">
                             <div className="contact-info__section">
                                 <h3>Contact Information</h3>
                                 <p>Share your wholesale requests or custom project needs — our team is ready to assist.</p>
