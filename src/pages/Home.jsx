@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import useScrollReveal from '../hooks/useScrollReveal'
+import VideoModal from '../components/VideoModal'
 import './Home.css'
 
 function Home() {
     const [openFAQ, setOpenFAQ] = useState(null)
     const [activeImage, setActiveImage] = useState(null)
+    const [activeVideo, setActiveVideo] = useState(null)
     const videoRefs = useRef([])
     const galleryRef = useRef(null)
 
@@ -232,6 +234,18 @@ function Home() {
                             <span>Quality</span>
                         </h2>
                         <p className="video-section__desc">From raw fabric to ready-to-ship shirts - every step is crafted with purpose and global compatibility.</p>
+                        <button
+                            type="button"
+                            className="video-play-link"
+                            onClick={() => setActiveVideo({ url: 'https://player.vimeo.com/video/1136411580?autoplay=1&loop=1&title=0&byline=0&portrait=0', title: 'Manufacturing Excellence' })}
+                        >
+                            <div className="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                            <span>Watch Video</span>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -342,6 +356,18 @@ function Home() {
                             <span>Detail</span>
                         </h2>
                         <p className="video-section__desc">Every shirt passes through our refined production stages - ensuring consistent quality and exceptional craftsmanship.</p>
+                        <button
+                            type="button"
+                            className="video-play-link"
+                            onClick={() => setActiveVideo({ url: 'https://player.vimeo.com/video/1124425639?autoplay=1&loop=1&title=0&byline=0&portrait=0', title: 'Quality Assurance' })}
+                        >
+                            <div className="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                            <span>Watch Video</span>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -536,15 +562,23 @@ function Home() {
             {/* MAP */}
             < section className="map" >
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.5!2d28.95!3d41.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAyJzI0LjAiTiAyOMKwNTcnMDAuMCJF!5e0!3m2!1sen!2str!4v1600000000000!5m2!1sen!2str"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.0!2d28.9123!3d41.0654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5e7b0f0a5e7%3A0x5b8b8c5b8b8b8b8b!2sKaz%C4%B1m%20Karabekir%20Cd.%20No%3A66-68%2C%20Gaziosmanpa%C5%9Fa%2C%20Istanbul!5e0!3m2!1sen!2str!4v1700000000000"
                     width="100%"
                     height="400"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
-                    title="Location"
+                    title="Payza Textile Location"
                 ></iframe>
             </section >
+
+            {/* Video Modal */}
+            <VideoModal
+                isOpen={!!activeVideo}
+                videoUrl={activeVideo?.url || ''}
+                title={activeVideo?.title || ''}
+                onClose={() => setActiveVideo(null)}
+            />
         </>
     )
 }

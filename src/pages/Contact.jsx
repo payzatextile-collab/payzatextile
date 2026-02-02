@@ -315,13 +315,13 @@ function Contact() {
             {/* Map Section */}
             < section className="map-section" >
                 <iframe
-                    src="https://www.google.com/maps?q=Kaz%C4%B1m+Karabekir+Cd+No%3A66-68+Gaziosmanpa%C5%9Fa+Istanbul&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.0!2d28.9123!3d41.0654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5e7b0f0a5e7%3A0x5b8b8c5b8b8b8b8b!2sKaz%C4%B1m%20Karabekir%20Cd.%20No%3A66-68%2C%20Gaziosmanpa%C5%9Fa%2C%20Istanbul!5e0!3m2!1sen!2str!4v1700000000000"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
-                    title="Location"
+                    title="Payza Textile Location"
                 ></iframe>
             </section >
         </>
