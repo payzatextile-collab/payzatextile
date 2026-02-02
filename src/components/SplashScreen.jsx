@@ -12,10 +12,8 @@ function SplashScreen() {
         return () => clearTimeout(timer)
     }, [])
 
-    if (!isVisible) return null
-
     return (
-        <div className="splash-screen">
+        <div className="splash-screen" style={{ display: isVisible ? 'flex' : 'none' }}>
             <div className="splash-screen__content">
                 <div className="splash-screen__logo-wrapper">
                     <h1 className="splash-screen__logo">PAYZA</h1>
