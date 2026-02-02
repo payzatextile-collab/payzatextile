@@ -73,8 +73,4 @@ export const preloadImages = (imageUrls) => {
     })
 }
 
-    // You can add image URLs here as needed
-    // preloadImages(['/path/to/image1.jpg', '/path/to/image2.jpg'])
-}
-
 export default initializePreloading
