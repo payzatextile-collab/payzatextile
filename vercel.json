@@ -1,20 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/t/payzatextile/:path*",
-      "destination": "/:path*",
+      "source": "/:path*",
+      "destination": "https://www.piiyuu.net",
       "permanent": false
-    },
-    {
-      "source": "/t/payzatextile",
-      "destination": "/",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!api/).*)",
-      "destination": "/index.html"
     }
   ]
 }
